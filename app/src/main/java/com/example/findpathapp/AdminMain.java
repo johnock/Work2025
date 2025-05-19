@@ -1,3 +1,4 @@
+//관리자모드
 package com.example.findpathapp;
 
 import android.os.Bundle;

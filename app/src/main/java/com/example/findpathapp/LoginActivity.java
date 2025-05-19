@@ -1,3 +1,4 @@
+//로그인 화면
 package com.example.findpathapp;
 
 import android.content.Intent;
@@ -21,8 +22,8 @@ import retrofit2.Response;
 public class LoginActivity extends AppCompatActivity {
 
     private EditText etId, etPw;
-    private Button btnLogin, btnSignup, btnFindId, btnFindPw;
-    private Button btnGuest;  // 비회원 모드 버튼
+    private Button btnLogin, btnSignup, btnFindId, btnFindPw, btnGuest;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,10 +58,10 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent = new Intent(LoginActivity.this, FindPwActivity.class);
             startActivity(intent);
         });
-
+        // 비회원 모드
         btnGuest = findViewById(R.id.btn_guest);
         btnGuest.setOnClickListener(v -> {
-            Intent intent = new Intent(LoginActivity.this, GuestMain.class);
+            Intent intent = new Intent(LoginActivity.this, MapsActivity.class);
             startActivity(intent);
         });
     }
@@ -94,7 +95,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         if ("success".equals(status)) {
                             // 일반회원 로그인 성공 시 Main 화면으로 이동
-                            Intent intent = new Intent(LoginActivity.this, NormalMain.class);
+                            Intent intent = new Intent(LoginActivity.this, MapsActivity.class);
                             startActivity(intent);
                             finish();
                         }

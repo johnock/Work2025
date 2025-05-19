@@ -15,12 +15,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FindPathApp"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyABc8FFjpaxMy7qW1_Ji-YKdSs9vhzf2O8" />
+
         <activity android:name=".AdminMain" />
         <activity android:name=".FindPwActivity" />
         <activity android:name=".FindIdActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".NormalMain" />
         <activity android:name=".GuestMain" />
+
+
+        <activity
+            android:name=".MapsActivity"
+            android:exported="true" />
+
         <activity
             android:name=".LoginActivity"
             android:exported="true">

@@ -1,3 +1,4 @@
+//비회원 모드
 package com.example.findpathapp;
 
 import android.os.Bundle;
